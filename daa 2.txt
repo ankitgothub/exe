@@ -1,0 +1,58 @@
+# Program to Calculate e^x by Recursion
+
+
+# Recursive Function
+# global variables p and f
+p = 1.0
+f = 1.0
+
+
+def e(x, n):
+
+	global p, f
+
+	# Termination condition
+	if (n == 0):
+		return 1
+
+	# Recursive call
+	r = e(x, n - 1)
+
+	# Update the power of x
+	p = p * x
+
+	# Factorial
+	f = f * n
+
+	return (r + p / f)
+
+# Driver code
+
+
+x = 4
+n = 15
+print(e(x, n))
+
+
+Efficient program to calculate e^x
+
+# Python program to calculate
+# e raise to the power x
+
+# Function to calculate value
+# using sum of first n terms of
+# Taylor Series
+def exponential(n, x):
+
+	# initialize sum of series
+	sum = 1.0
+	for i in range(n, 0, -1):
+		sum = 1 + x * sum / i
+	print ("e^x =", sum)
+
+# Driver program to test above function
+n = 10
+x = 1.0
+exponential(n, x)
+
+# This code is contributed by Danish Raza
